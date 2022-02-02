@@ -15,7 +15,7 @@ def success():
 
 @app.route('/hello/<string:banana>/<int:num>')
 def hello(banana, num):
-    return f"Hello {banana * num}"
+    return render_template("hello.html", banana=banana, num=num)
 
 
 if __name__ == "__main__":
